@@ -1,4 +1,5 @@
 FROM balenalib/raspberrypi4-64-debian-python:latest
+ENTRYPOINT ["/bin/bash"]
 CMD [ "/bin/bash", ]
 WORKDIR /usr/src/app
 
