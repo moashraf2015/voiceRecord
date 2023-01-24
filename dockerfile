@@ -1,5 +1,5 @@
 FROM balenalib/raspberrypi4-64-debian-python:latest
-
+CMD [ "/bin/bash", ]
 WORKDIR /usr/src/app
 
 COPY . .
@@ -10,4 +10,3 @@ RUN python3 prediction.py
 
 COPY . .
 
-CMD [ "/bin/bash","python", "./prediction.py" ]
