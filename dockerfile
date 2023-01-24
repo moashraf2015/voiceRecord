@@ -2,9 +2,9 @@ FROM balenalib/raspberrypi4-64-debian-python:latest
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
+COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+
 
 CMD [ "python", "./predictions.py" ]
