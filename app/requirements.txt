@@ -1,0 +1,13 @@
+pyaudio
+pydub
+librosa
+matplotlib
+numpy
+pandas
+scipy
+keras
+tensorflow
+pcm
+numba
+protobuf
+scikit-learn
