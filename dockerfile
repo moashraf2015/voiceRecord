@@ -8,4 +8,4 @@ RUN python3 prediction.py
 
 COPY . .
 
-CMD [ "python", "./your-daemon-or-script.py" ]
+CMD [ "/bin/bash","python", "./prediction.py" ]
