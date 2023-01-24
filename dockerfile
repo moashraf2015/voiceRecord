@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi4-64-debian-python:latest
+FROM  balenalib/raspberrypi4-64-ubuntu-python:latest
 
 WORKDIR /usr/src/app
 
