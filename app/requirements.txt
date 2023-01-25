@@ -8,6 +8,6 @@ pandas
 #keras
 #tensorflow
 pcm
-numba
+#numba
 protobuf
 scikit-learn
