@@ -20,8 +20,8 @@ WORKDIR /usr/src/app
 COPY ./app/requirements.txt ./
 RUN  pip install scipy
 RUN pip install keras
-RUN pip install tensorflow
-
+#RUN pip install tensorflow
+RUN  pip install joblib
 RUN pip install --no-cache-dir -r requirements.txt
 
 
