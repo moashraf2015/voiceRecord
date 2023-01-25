@@ -19,6 +19,7 @@ WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install keras
 
 COPY . .
 CMD [ "python", "./predictions.py" ]
