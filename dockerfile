@@ -13,7 +13,7 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.9.16
+FROM python:3.8.0
 
 WORKDIR /usr/src/app
 
