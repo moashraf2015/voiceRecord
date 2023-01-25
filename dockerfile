@@ -18,6 +18,7 @@ FROM python:3.9.16
 WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
+RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN  pip install scipy
 RUN pip install keras
 #RUN pip install tensorflow
