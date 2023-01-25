@@ -13,7 +13,8 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.7.0
+FROM python:3.8.0-alpine
+
 
 
 WORKDIR /usr/src/app
