@@ -25,12 +25,12 @@ RUN chmod +x /usr/local/bin/python3
 RUN apk update && apk add portaudio-dev
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN /usr/local/bin/python -m pip install --upgrade wheel
-#RUN  pip install scipy
+RUN  pip install scipy
 RUN pip install keras
 #RUN pip install tensorflow
-#RUN  pip install joblib
-#RUN pip install numba
-#RUN pip install PyAudio
+RUN  pip install joblib
+RUN pip install numba
+RUN pip install PyAudio
 RUN pip install --no-cache-dir -r requirements.txt
 
 
