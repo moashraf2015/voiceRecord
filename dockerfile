@@ -19,6 +19,7 @@ WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
 RUN /usr/local/bin/python -m pip install --upgrade pip
+RUN /usr/local/bin/python -m pip install --upgrade wheel
 RUN  pip install scipy
 RUN pip install keras
 #RUN pip install tensorflow
