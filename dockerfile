@@ -13,7 +13,8 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.8-slim-buster
+FROM python:3.7.0
+
 
 WORKDIR /usr/src/app
 
