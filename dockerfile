@@ -13,7 +13,8 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.7.0-alpine
+FROM python:3.8-alpine3.12
+
 
 
 
