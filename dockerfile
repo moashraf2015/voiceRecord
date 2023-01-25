@@ -13,11 +13,12 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.8.0
+FROM python:3.8-slim-buster
 
 WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
+RUN apt-get update && apt-get install -y portaudio19-dev
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN /usr/local/bin/python -m pip install --upgrade wheel
 RUN  pip install scipy
