@@ -22,7 +22,7 @@ WORKDIR /usr/src/app
 COPY ./app/requirements.txt ./
 RUN ls -l /usr/local/bin/python3
 RUN chmod +x /usr/local/bin/python3
-RUN yum  update && yum  install -y portaudio19-dev
+RUN apk update && apk add portaudio-dev
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN /usr/local/bin/python -m pip install --upgrade wheel
 RUN  pip install scipy
