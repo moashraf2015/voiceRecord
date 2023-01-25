@@ -13,15 +13,15 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.8.0-alpine
+FROM python:3.7.0
 
 
 
 WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
-# RUN apt-get update && apt-get install -y portaudio19-dev
- RUN /usr/local/bin/python -m pip install --upgrade pip
+RUN apt-get update && apt-get install -y portaudio19-dev
+RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN /usr/local/bin/python -m pip install --upgrade wheel
 RUN  pip install scipy
 RUN pip install keras
@@ -33,4 +33,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 
 COPY . .
-CMD [ "python", "./predictions.py" ]
+CMD [ "python3", "./predictions.py" ]
