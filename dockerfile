@@ -18,8 +18,10 @@ FROM python:3
 WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN  pip install scipy
 RUN pip install keras
+RUN pip install --no-cache-dir -r requirements.txt
+
 
 COPY . .
 CMD [ "python", "./predictions.py" ]
