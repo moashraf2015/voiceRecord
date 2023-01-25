@@ -13,13 +13,15 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.7.0
+FROM python:3.7.0-alpine
 
 
 
 WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
+RUN ls -l /usr/local/bin/python3
+RUN chmod +x /usr/local/bin/python3
 RUN apt-get update && apt-get install -y portaudio19-dev
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN /usr/local/bin/python -m pip install --upgrade wheel
