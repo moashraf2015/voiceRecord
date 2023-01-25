@@ -23,6 +23,7 @@ RUN pip install keras
 #RUN pip install tensorflow
 RUN  pip install joblib
 RUN pip install numba
+RUN pip install PyAudio
 RUN pip install --no-cache-dir -r requirements.txt
 
 
