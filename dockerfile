@@ -13,7 +13,7 @@
 
 # CMD [ "python", "./predictions.py" ]
 
-FROM python:3.7-alpine3.12
+#FROM python:3.7-alpine3.12
 
 
 
@@ -58,4 +58,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 
 COPY . .
-CMD [ "/bin/bash","python3", "./predictions.py", "-m" , "flask", "run", "--host=0.0.0.0"]
+
+RUN python3 predictions.py
+# CMD [ "/bin/bash","python3", "./predictions.py", "-m" , "flask", "run", "--host=0.0.0.0"]
