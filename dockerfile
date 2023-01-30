@@ -57,8 +57,8 @@ RUN pip install PyAudio
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-COPY . .
+COPY ./ ./
 
 #RUN python3 ./usr/src/app/predictions.py
 ENV PORT 80
-CMD [ "/bin/bash","python3", "./predictions.py"]
+CMD [ "/bin/bash","python3", "./predictions.py",  "--host=0.0.0.0"]
