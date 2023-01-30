@@ -61,6 +61,6 @@ COPY ./ ./
 
 #RUN python3 ./usr/src/app/predictions.py
 ENV PORT 80
-RUN chmod +x prediction.py
-ENTRYPOINT ["/prediction.py"]
+RUN chmod +x ./app/prediction.py
+ENTRYPOINT ["./app/prediction.py"]
 CMD [ "python3", "./prediction.py",  "--host=0.0.0.0"]
