@@ -45,6 +45,7 @@ FROM python:3.7.0
 WORKDIR /usr/src/app
 
 COPY ./app/requirements.txt ./
+RUN ldconfig -p | grep libsndfile.so
 RUN apt-get update && apt-get install -y portaudio19-dev
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN /usr/local/bin/python -m pip install --upgrade wheel
@@ -60,8 +61,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV PORT 80
-RUN chmod 777 ./app/prediction.py
-ENTRYPOINT ["./app/prediction.py"]
+# ENV PORT 80
+# RUN chmod 777 ./app/prediction.py
+# ENTRYPOINT ["./app/prediction.py"]
 CMD [ "/bin/bash","python3", "./prediction.py", "-m" , "flask", "run", "--host=0.0.0.0"]
 
