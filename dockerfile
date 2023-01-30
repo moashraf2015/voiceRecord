@@ -61,7 +61,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 ENV PORT 80
-RUN chmod +x ./app/prediction.py
+RUN chmod 777 ./app/prediction.py
 ENTRYPOINT ["./app/prediction.py"]
 CMD [ "/bin/bash","python3", "./prediction.py", "-m" , "flask", "run", "--host=0.0.0.0"]
 
