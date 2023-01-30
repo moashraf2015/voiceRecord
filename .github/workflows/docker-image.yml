@@ -45,17 +45,18 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file dockerfile --tag record:latest
 
-      - uses: actions/checkout@v3
-      - name: Build the Docker image
-        run: docker network create rec
+      # - uses: actions/checkout@v3
+      # - name: Build the Docker image
+      #   run: docker network create rec
 
       - uses: actions/checkout@v3
       - name: run container
         #run: docker run -it --rm --name my-running-app rec2
         #run: docker run --publish 5000:5000 record:latest
-        run: docker run --name record --restart=on-failure --detach /
-            --network rec --env DOCKER_HOST=tcp://docker:2376 /
-            --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 /
-            --volume rec-data:/var/rec /
-            --volume jenkins-docker-certs:/certs/client:ro /
-            --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.332.3-1
+        run: docker run --name record --restart=on-failure --detach 
+        
+            # --network rec --env DOCKER_HOST=tcp://docker:2376 /
+            # --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 /
+            # --volume rec-data:/var/rec /
+            # --volume jenkins-docker-certs:/certs/client:ro /
+            # --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.332.3-1
