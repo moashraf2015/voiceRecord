@@ -54,13 +54,14 @@ RUN pip install keras
 RUN  pip install joblib
 RUN pip install numba
 RUN pip install PyAudio
+RUN pip install sounddevice
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-COPY ./ ./
+COPY . .
 
-#RUN python3 ./usr/src/app/predictions.py
 ENV PORT 80
 RUN chmod +x ./app/prediction.py
 ENTRYPOINT ["./app/prediction.py"]
-CMD [ "python3", "./prediction.py",  "--host=0.0.0.0"]
+CMD [ "/bin/bash","python3", "./prediction.py", "-m" , "flask", "run", "--host=0.0.0.0"]
+
