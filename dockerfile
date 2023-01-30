@@ -59,5 +59,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN python ./usr/src/app/predictions.py
-# CMD [ "/bin/bash","python3", "./predictions.py", "-m" , "flask", "run", "--host=0.0.0.0"]
+#RUN python3 ./usr/src/app/predictions.py
+CMD [ "/bin/bash","python3", "./predictions.py", "-m" , "flask", "run", "--host=0.0.0.0"]
