@@ -12,12 +12,9 @@ filename = "prediction.wav"
 class_names = ["Wake Word NOT Detected", "Wake Word Detected"]
 
 ##### LOADING OUR SAVED MODEL and PREDICTING ###
-import os
-print("Prediction Started: ")
-print(os.getcwd())
-print(os.listdir("."))
-model = load_model(os.getcwd() + "app/saved_model/WWD.h5")
+model = load_model("app/saved_model/WWD.h5")
 
+print("Prediction Started: ")
 i = 0
 while True:
     print("Say Now: ")
