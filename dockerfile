@@ -61,7 +61,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 
 COPY . .
-
+RUN chmod 777 ./app/saved_model
 # ENV PORT 80
 # RUN chmod 777 ./app/prediction.py
 # ENTRYPOINT ["./app/prediction.py"]
