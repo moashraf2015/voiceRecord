@@ -15,7 +15,7 @@ class_names = ["Wake Word NOT Detected", "Wake Word Detected"]
 import os
 print("Prediction Started: ")
 print(os.getcwd())
-model = load_model("saved_model/WWD.h5")
+model = load_model(os.getcwd() + "/saved_model/WWD.h5")
 
 i = 0
 while True:
