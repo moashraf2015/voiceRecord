@@ -16,7 +16,7 @@ import os
 print("Prediction Started: ")
 print(os.getcwd())
 print(os.listdir("."))
-model = load_model(os.getcwd() + "/saved_model/WWD.h5")
+model = load_model(os.getcwd() + "app/saved_model/WWD.h5")
 
 i = 0
 while True:
