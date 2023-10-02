@@ -27,7 +27,7 @@ jobs:
   #         mode    : build-only
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
 #     strategy:
 #       matrix:
 #         os: [ ubuntu-latest, windows-latest, macOS-latest]
